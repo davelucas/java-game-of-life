@@ -1,6 +1,5 @@
 package com.example.gameoflife;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,27 +7,23 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/game")
 public class GameController {
 
-    private final GameService service;
-
-    @Autowired
-    public GameController(GameService service) {
-        this.service = service;
-    }
-
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
-    public Game newBoard(@RequestBody GameConfig gameConfig) {
-        return new Game(service.newBoard(gameConfig.rows, gameConfig.columns, gameConfig.activeCells));
+    public GameId newBoard(@RequestBody GameConfig gameConfig) {
+        // TODO: Implement this method to return a GameId for a new game insatnce
+        return null;
     }
 
     @PostMapping("{id}/toggleCell")
     @ResponseStatus(HttpStatus.OK)
-    public Cell[] toggleCell(@PathVariable String id, @RequestBody Cell cell) {
-        return service.toggleCell(id, cell);
+    public Cell[] toggleCell(@PathVariable GameId id, @RequestBody Cell cell) {
+        // TODO: Implement this method to toggle the given cell for the GameId
+        return new Cell[0];
     }
 
     @GetMapping("{id}/nextGeneration")
-    public Cell[] nextGeneration(@PathVariable String id) {
-        return service.nextGeneration(id);
+    public Cell[] nextGeneration(@PathVariable GameId id) {
+        // TODO: Implement this method to get the next generation of game of life for the GameId according to the rules in the README
+        return new Cell[0];
     }
 }

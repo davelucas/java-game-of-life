@@ -1,13 +1,13 @@
 package com.example.gameoflife;
 
-public class Game {
+public class GameId {
     public final String id;
 
-    public Game() {
+    public GameId() {
         this("");
     }
 
-    public Game(String id) {
+    public GameId(String id) {
         this.id = id;
     }
 }
