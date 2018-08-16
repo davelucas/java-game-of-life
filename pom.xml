@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>gameoflife</name>
-	<description>Demo project for Spring Boot</description>
+	<description>A partially complete service to support Conway's game of life</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

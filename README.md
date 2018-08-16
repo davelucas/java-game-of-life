@@ -1,4 +1,8 @@
-Rules
+Implement Game.java in accordance with the rules to complete the service. Once complete, start the service and use react-gameoflife to see the game running.
+
+Run `./mvnw spring-boot:run` to start the service
+
+### Rules to implement
 
 - Any live cell with fewer than two live neighbors dies, as if by under population
 
